@@ -98,12 +98,21 @@ We got hands-on with two essential open-source tools for Verilog simulation and 
 
 Below are snapshots from our PART 2 session:
 
-![File_Path](../images/filepath.png)  
-*This is the file path of my project*
+![Read](../images/READNET.png)  
+*This is the read command excecution*
 
-![iverilog compilation](../images/iverilogtest.png)  
-*Compiling Verilog code with Icarus Verilog*
+![synthesis](../images/SYNTHNET.png)
+*Synthesis of the RTL code and the .lib file*
 
-![gtkwave waveform](../images/gtkwavetest.png)  
-*Viewing simulation results in GTKWave*
+![ABC](../images/ABC_NET.png)
+*Show the number ports using the abc command*
+
+![Show](../images/SHOW_NET.png)
+*Shows the block diagram of the netlist*
+
+![Netlist](../images/unfiltered_net.png)  
+*Unfiltered netlist in verilog format*
+
+![Netlist](../images/filtered_net.png)  
+*Filtered netlist in verilog format*
 
