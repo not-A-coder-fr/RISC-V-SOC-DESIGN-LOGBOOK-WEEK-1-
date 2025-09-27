@@ -27,7 +27,7 @@ Synthesis tools optimize combinational logic in two main ways:
 
 🖼️ **Image 7**: Shows `opt_check` module with 2-input AND gate → minimal cell usage.
 
-![Direct Mapping: AND Gate](https://via.placeholder.com/600x300?text=Image+7+-+Direct+Mapping+AND+Gate)
+![Direct Mapping: AND Gate](../images/opt.jpeg)
 
 > *Image 7: Simple AND gate mapped directly to `sky130_fd_sc_hd__and2_0` — no further optimization needed.*
 
@@ -40,7 +40,7 @@ Synthesis tools optimize combinational logic in two main ways:
 🖼️ **Image 9**: Shows `opt_check2` with OR gate + handwritten derivation:  
 `y = ~a·b + a = a + b`
 
-![Boolean Optimization: OR Gate](https://via.placeholder.com/600x300?text=Image+9+-+Boolean+Optimization+OR+Gate)
+![Boolean Optimization: OR Gate](../images/opt2.jpeg)
 
 > *Image 9: Synthesis simplified `(~a & b) | a` to `a | b` — shown as OR gate and verified with Boolean algebra.*
 
@@ -56,7 +56,7 @@ Sequential optimizations target flip-flops, registers, and state machines.
 
 🖼️ **Image 10**: Shows `multiple_module_opt2` with inputs `a`, `b`, `c`, `d` feeding into intermediate signals `$a`, `$b`, `$c`, `$d`, then to `U1.y`, `U2.y`, `U3.y` → eventually output `y`.
 
-![Sequential Constant Propagation](https://via.placeholder.com/600x300?text=Image+10+-+Sequential+Constant+Propagation)
+![Sequential Constant Propagation](../images/multi_opt2.jpeg)
 
 > *Image 10: Sequential logic with multiple stages — synthesis may propagate constants through registers if possible.*
 
@@ -113,7 +113,7 @@ assign y = a & b & c;
 ```
 → Mapped to `sky130_fd_sc_hd__and3_1` (3-input AND cell).
 
-![3-Input AND Gate](https://via.placeholder.com/600x300?text=Image+6+-+3-Input+AND+Gate)
+![3-Input AND Gate](../images/opt3.jpeg)
 
 > *Image 6: Direct mapping of 3-input AND to single cell — efficient use of library.*
 
@@ -125,7 +125,7 @@ assign y = a ^ b ^ c;
 ```
 → Mapped to `sky130_fd_sc_hd__xnor2_1` (XNOR gate) — likely due to internal inversion or logic restructuring.
 
-![XOR to XNOR Mapping](https://via.placeholder.com/600x300?text=Image+8+-+XOR+to+XNOR+Mapping)
+![XOR to XNOR Mapping](../images/opt4.jpeg)
 
 > *Image 8: Synthesis may map XOR to XNOR + inversion depending on cell availability and cost.*
 
