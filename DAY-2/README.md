@@ -59,7 +59,7 @@ endmodule
 
 🖼️ **Image 1**: Shows hierarchical view in `.dot` format — `sub_module1` as a black box with internal AND gate.
 
-![Hierarchical Synthesis Output](https://via.placeholder.com/600x300?text=Image+1+-+Hierarchical+Synthesis+Graph)
+![Hierarchical Synthesis Output](../images/image1.jpeg)
 
 > *Image 1: Hierarchical synthesis graph showing `sub_module1` as a black box with internal gate.*
 
@@ -78,7 +78,7 @@ yosys> flatten
 
 🖼️ **Image 4**: After flattening, the design becomes one continuous netlist — no module boundaries remain.
 
-![Flattened Synthesis Output](https://via.placeholder.com/600x300?text=Image+4+-+Flattened+Design+Graph)
+![Flattened Synthesis Output](../images/image4.jpeg)
 
 > *Image 4: Flattened design graph — no module boundaries, fully optimized.*
 
@@ -91,7 +91,7 @@ Left: Hierarchical code (`multiple_modules_hier.v`)
 Right: Flattened code (`multiple_modules_flat.v`)  
 → Shows how internal wires become explicit and modules are expanded.
 
-![Hierarchical vs Flattened Code](https://via.placeholder.com/600x300?text=Image+2+-+Code+Comparison)
+![Hierarchical vs Flattened Code](../images/image2.jpeg)
 
 > *Image 2: Side-by-side comparison of hierarchical vs flattened Verilog code.*
 
@@ -102,7 +102,7 @@ yosys> write_verilog -noattr multiple_modules_hier.v
 ```
 ➡️ Output shows mapped cells like `sky130_fd_sc_hd__and2_0` — confirming technology mapping occurred.
 
-![Writing Synthesized Verilog](https://via.placeholder.com/600x300?text=Image+5+-+Write+Verilog+Command)
+![Writing Synthesized Verilog](../images/image1.jpeg)
 
 > *Image 5: Terminal showing `write_verilog` command and generated Verilog with mapped cells.*
 
@@ -120,7 +120,7 @@ Synthesis tools optimize based on:
 🖼️ **Image 3**: Shows a block labeled `mult8` with input `a` → `2x 2:0 - 5:0` → output `y`.
 ➡️ This represents an 8-bit multiplier inferred from RTL — even if not explicitly instantiated!
 
-![Inferred Multiplier Block](https://via.placeholder.com/600x300?text=Image+3+-+Inferred+Multiplier+Block)
+![Inferred Multiplier Block](../images/image7.jpeg)
 
 > *Image 3: Synthesis inferred an 8-bit multiplier (`mult8`) from RTL description.*
 
@@ -190,10 +190,10 @@ write_verilog -noattr <output.v>
 
 | Image # | Description                             | Markdown Link |
 |---------|-----------------------------------------|---------------|
-| 1       | Hierarchical synthesis graph            | `![Hierarchical Synthesis Output](image1.png)` |
-| 2       | Side-by-side code comparison            | `![Hierarchical vs Flattened Code](image2.png)` |
-| 3       | Inferred multiplier block               | `![Inferred Multiplier Block](image3.png)` |
-| 4       | Flattened design graph                  | `![Flattened Synthesis Output](image4.png)` |
-| 5       | Writing synthesized Verilog             | `![Writing Synthesized Verilog](image5.png)` |
+| 1       | Hierarchical synthesis graph            | `![Hierarchical Synthesis Output](../images/image1.jpeg)` |
+| 2       | Side-by-side code comparison            | `![Hierarchical vs Flattened Code](../images/image2.jpeg)` |
+| 3       | Inferred multiplier block               | `![Inferred Multiplier Block](../images/image3.jpeg)` |
+| 4       | Flattened design graph                  | `![Flattened Synthesis Output](../images/image4.jpeg)` |
+| 5       | Writing synthesized Verilog             | `![Writing Synthesized Verilog](../images/image5.jpeg)` |
 
 ---
